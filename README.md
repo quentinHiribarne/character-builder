@@ -1,1 +1,1 @@
-# jdrPWA
+# PWA character builder
