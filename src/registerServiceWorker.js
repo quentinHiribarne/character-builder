@@ -1,6 +1,8 @@
 /* eslint-disable no-console */
-
 import { register } from "register-service-worker";
+// import { precacheAndRoute } from "workbox-precaching";
+
+// precacheAndRoute(self.__WB_MANIFEST);
 
 // if (process.env.NODE_ENV === "production") {
 register(`${process.env.BASE_URL}service-worker.js`, {
