@@ -26,7 +26,7 @@ module.exports = {
     https: true,
   },
   pwa: {
-    name: "My App",
+    name: "Character Builder",
     themeColor: "#4DBA87",
     msTileColor: "#000000",
     appleMobileWebAppCapable: "yes",
