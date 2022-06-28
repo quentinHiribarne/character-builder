@@ -1,1 +1,3 @@
-register
+<template>
+    <div>Register</div>
+</template>
