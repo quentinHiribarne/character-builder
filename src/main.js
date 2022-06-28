@@ -4,6 +4,15 @@ import "./registerServiceWorker";
 import "./tailwind.css";
 import router from "./router";
 
+/* import the fontawesome core */
+import { library } from "@fortawesome/fontawesome-svg-core";
+/* import font awesome icon component */
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+/* import specific icons */
+import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
+
+library.add(faUserSecret);
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -29,5 +38,7 @@ const firebase = initializeApp(firebaseConfig);
 const analytics = getAnalytics(firebase);
 
 const app = createApp(App);
+
 app.use(router);
+app.component("font-awesome-icon", FontAwesomeIcon);
 app.mount("#app");
