@@ -1,7 +1,7 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import "./registerServiceWorker";
-import router from "./router";
+import { createApp } from 'vue';
+import App from './App.vue';
+import './registerServiceWorker';
+import router from './router';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
@@ -27,10 +27,6 @@ const firebaseConfig = {
 const firebase = initializeApp(firebaseConfig);
 const analytics = getAnalytics(firebase);
 
-<<<<<<< HEAD
-createApp(App).mount('#app');
-=======
 const app = createApp(App);
 app.use(router);
-app.mount("#app");
->>>>>>> 799c1f8bae7ee6264ee30dd5aafc50662a6ded4d
+app.mount('#app');
