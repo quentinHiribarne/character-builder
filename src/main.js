@@ -4,6 +4,11 @@ import "./registerServiceWorker";
 import "./tailwind.css";
 import router from "./router";
 
+/* import font awesome icon component */
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
+import globalComponents from "./plugins/globalComponents.js";
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -29,5 +34,9 @@ const firebase = initializeApp(firebaseConfig);
 const analytics = getAnalytics(firebase);
 
 const app = createApp(App);
+
+globalComponents.install(app);
+
 app.use(router);
+app.component("font-awesome-icon", FontAwesomeIcon);
 app.mount("#app");
