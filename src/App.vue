@@ -2,6 +2,7 @@
     <div>
         <nav>
             <router-link to="/"> Home </router-link> |
+            <router-link to="/about"> About </router-link> |
             <span v-if="isLoggedIn">
                 <button @click="logout">Logout</button>
             </span>
@@ -32,6 +33,20 @@ export default {
                 isLoggedIn.value = true; // if we have a user
             } else {
                 isLoggedIn.value = false; // if we do not
+            }
+        });
+
+        router.beforeEach((to, from, next) => {
+            if (to.matched.some((record) => record.meta.requiresAuth)) {
+                // this route requires auth, check if logged in
+                // if not, redirect to login page.
+                if (!isLoggedIn.value) {
+                    next({ name: "signInPage" });
+                } else {
+                    next(); // go to wherever I'm going
+                }
+            } else {
+                next(); // does not require auth, make sure to always call next()!
             }
         });
 
