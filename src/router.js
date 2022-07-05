@@ -6,6 +6,14 @@ const router = createRouter({
             name: "home",
             path: "/",
             component: () => import("./views/Home.vue"),
+            meta: {
+                requiresAuth: true,
+            },
+        },
+        {
+            name: "about",
+            path: "/about",
+            component: () => import("../src/views/About.vue"),
         },
         {
             name: "signUp",
