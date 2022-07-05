@@ -3,19 +3,19 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            name: "homePage",
+            name: "home",
             path: "/",
-            component: () => import("../src/views/HomePage.vue"),
+            component: () => import("./views/Home.vue"),
         },
         {
-            name: "registerPage",
-            path: "/register",
-            component: () => import("../src/views/RegisterPage.vue"),
+            name: "signUp",
+            path: "/sign-up",
+            component: () => import("./views/SignUp.vue"),
         },
         {
             name: "signInPage",
             path: "/sign-in",
-            component: () => import("../src/views/SignInPage.vue"),
+            component: () => import("./views/SignIn.vue"),
         },
     ],
 });
