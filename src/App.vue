@@ -2,19 +2,14 @@
     <div>
         <nav>
             <router-link to="/"> Home </router-link> |
-<<<<<<< HEAD
-            <router-link to="/sign-up"> Sign-up </router-link> |
-            <router-link to="/sign-in"> Login </router-link> |
-=======
             <router-link to="/about"> About </router-link> |
             <span v-if="isLoggedIn">
                 <button @click="logout">Logout</button>
             </span>
             <span v-else>
-                <router-link to="/register"> Register </router-link> |
+                <router-link to="/sign-up"> Sign-up </router-link> |
                 <router-link to="/sign-in"> Login </router-link>
             </span>
->>>>>>> main
         </nav>
         <router-view />
     </div>
