@@ -3,17 +3,17 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            name: "home",
+            name: "about",
             path: "/",
-            component: () => import("./views/Home.vue"),
+            component: () => import("../src/views/About.vue"),
+        },
+        {
+            name: "dashboard",
+            path: "/dashboard",
+            component: () => import("./views/Dashboard.vue"),
             meta: {
                 requiresAuth: true,
             },
-        },
-        {
-            name: "about",
-            path: "/about",
-            component: () => import("../src/views/About.vue"),
         },
         {
             name: "signUp",
